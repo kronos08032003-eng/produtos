@@ -47,7 +47,7 @@ $app->get('/motivacional', function ($request, $response) {
               ->withStatus(200);
 });
 $app->get('/musica', function ($request, $response) {
-    $response->getBody()->write(json_encode(['musica' => 'Espresso']));
+    $response->getBody()->write(json_encode(['motivacional' => 'Você é capaz de alcançar qualquer coisa que se proponha!']));
     return $response
               ->withHeader('Content-Type', 'application/json')
               ->withStatus(200);
@@ -75,6 +75,18 @@ $app->get('/filme/favoritos', function ($request, $response) {
         'filme2' => 'Os Vingadores: Ultimato',
         'filme3' => 'Homem Aranha: Um Novo Dia',
         'filme4' => 'Apenas Um Show: O Filme',
+
+           ]));
+    return $response
+              ->withHeader('Content-Type', 'application/json')
+              ->withStatus(200);
+});
+$app->get('/filme/notas', function ($request, $response) {
+    $response->getBody()->write(json_encode([
+        'filme1' => '4',
+        'filme2' => '2',
+        'filme3' => '9',
+        'filme4' => '6',
 
            ]));
     return $response
