@@ -513,4 +513,3 @@ $app->get('/tic/xml', function ($request, $response) {
               ->withHeader('Content-Type', 'application/xml')
               ->withStatus(200);
 });
-$app->run();
